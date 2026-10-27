@@ -1,0 +1,3 @@
+# app-ads.txt of Kanch Games (IAB Tech Lab's app-ads.txt), for Casse-Glace's ads (Google AdMob).
+# AdMob reads https://kanchgames.github.io/app-ads.txt (the developer website of the Play listing).
+google.com, pub-3395268334646462, DIRECT, f08c47fec0942fa0

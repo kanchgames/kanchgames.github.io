@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Règles de confidentialité · Casse-Glace</title>
-<meta name="description" content="Règles de confidentialité du jeu Casse-Glace (Kanch Games) : aucune donnée personnelle collectée ni transmise.">
+<meta name="description" content="Règles de confidentialité du jeu Casse-Glace (Kanch Games) : aucun compte, aucune donnée collectée par nous, une publicité non personnalisée adaptée aux enfants.">
 <link rel="icon" href="/favicon.png" type="image/png">
 <link rel="alternate" hreflang="en" href="https://kanchgames.github.io/casse-glace/en/privacy/">
 <link rel="stylesheet" href="/assets/style.css">
@@ -16,22 +16,29 @@
     <img src="/casse-glace/icon.png" alt="" width="96" height="96">
     <h1>Règles de confidentialité</h1>
     <p class="tagline">Casse-Glace, un jeu de Kanch Games</p>
-    <p class="updated">Dernière mise à jour : 25 octobre 2026 (version 1.1.0 du jeu)</p>
+    <p class="updated">Dernière mise à jour : 27 octobre 2026 (version 1.2.0 du jeu)</p>
   </header>
 
   <section class="card">
     <h2>En bref</h2>
-    <p>Casse-Glace ne collecte aucune donnée personnelle et n'envoie rien hors de votre appareil. Il n'y a ni compte, ni connexion à Internet, ni publicité, ni mesure d'audience. Seul l'achat facultatif « Casse-Glace complet » passe par Google Play (voir « Achats »).</p>
+    <p>Casse-Glace ne demande aucun compte et nous ne collectons aucune donnée personnelle : votre progression reste sur votre appareil, et le jeu se joue entièrement sans connexion. Il affiche une publicité adaptée aux enfants et jamais personnalisée, fournie par Google AdMob ; pour la charger, la bibliothèque de Google transmet à Google quelques données techniques (voir « Publicité »). L'achat facultatif « Casse-Glace complet » retire la publicité ; il passe par Google Play (voir « Achats »).</p>
   </section>
 
   <section class="card">
-    <h2>Aucun compte, aucune donnée collectée ni transmise</h2>
-    <p>Le jeu ne demande ni compte, ni inscription, ni adresse e-mail. Il ne collecte aucune donnée personnelle et ne transmet aucune donnée, ni à nous ni à un tiers : il ne contient aucun outil d'analyse, de mesure d'audience, de publicité ou de suivi, et ne dépose aucun cookie.</p>
+    <h2>Aucun compte, rien de collecté par nous</h2>
+    <p>Le jeu ne demande ni compte, ni inscription, ni adresse e-mail. Nous ne collectons aucune donnée personnelle et le jeu ne nous envoie rien : il ne contient aucun outil d'analyse, de mesure d'audience ou de suivi de notre part. Seule la bibliothèque publicitaire de Google transmet des données à Google, décrites dans la section « Publicité ».</p>
   </section>
 
   <section class="card">
-    <h2>Aucune permission réseau</h2>
-    <p>Le jeu ne demande aucune permission d'accès au réseau : il ne peut pas se connecter à Internet. Il demande deux permissions à Android : la vibration (<code>VIBRATE</code>), pour les petites vibrations en jouant (elles se coupent dans les réglages du jeu), et la facturation Google Play (<code>com.android.vending.BILLING</code>), qui lui permet de proposer l'achat facultatif par l'intermédiaire de l'application Google Play de l'appareil.</p>
+    <h2>Permissions</h2>
+    <p>Le jeu demande ces permissions à Android :</p>
+    <ul>
+      <li>l'accès à Internet (<code>INTERNET</code>) et à l'état du réseau (<code>ACCESS_NETWORK_STATE</code>), uniquement pour charger la publicité : le jeu lui-même n'en a pas besoin et se joue sans connexion ;</li>
+      <li>deux permissions techniques ajoutées par la bibliothèque publicitaire de Google, pour ses tâches en arrière-plan (WorkManager d'Android) : garder le processeur éveillé pendant une tâche (<code>WAKE_LOCK</code>) et un service au premier plan (<code>FOREGROUND_SERVICE</code>, que le jeu ne démarre jamais) ; elles ne donnent accès à aucune donnée ;</li>
+      <li>la vibration (<code>VIBRATE</code>), pour les petites vibrations en jouant (elles se coupent dans les réglages du jeu) ;</li>
+      <li>la facturation Google Play (<code>com.android.vending.BILLING</code>), qui lui permet de proposer l'achat facultatif par l'intermédiaire de l'application Google Play de l'appareil.</li>
+    </ul>
+    <p>Le jeu ne demande pas l'identifiant publicitaire (permission <code>AD_ID</code>) : Android ne le lui donne pas. Il ne demande pas non plus les permissions de la « Privacy Sandbox » d'Android (publicité par centres d'intérêt et mesure d'attribution).</p>
   </section>
 
   <section class="card">
@@ -42,7 +49,8 @@
       <li>vos réglages (son, vibrations, vue, langue, qualité graphique, ambiance…) ;</li>
       <li>la partie en cours, pour la reprendre ;</li>
       <li>pour le multijoueur, les prénoms que vous choisissez de saisir pour les joueurs (facultatifs : sinon « Joueur 1 », « Joueur 2 »…) et la partie multijoueur en cours ;</li>
-      <li>si vous l'avez fait, l'achat « Casse-Glace complet » : seulement le fait qu'il est acquis.</li>
+      <li>si vous l'avez fait, l'achat « Casse-Glace complet » : seulement le fait qu'il est acquis ;</li>
+      <li>pour limiter la publicité : le nombre de niveaux réussis depuis la dernière publicité plein écran et l'heure de celle-ci, le nombre de vidéos regardées dans la journée.</li>
     </ul>
     <p>Ces données restent sur l'appareil : nous n'y avons pas accès. La sauvegarde automatique d'Android dans le cloud est désactivée pour ce jeu ; elles ne quittent l'appareil que si vous les copiez vous-même directement vers un nouvel appareil (transfert d'appareil à appareil proposé par Android).</p>
   </section>
@@ -54,27 +62,41 @@
 
   <section class="card">
     <h2>Enfants et familles</h2>
-    <p>Casse-Glace s'adresse à tous les publics, enfants compris. Il est conçu dans le respect des règles de Google Play pour les applications destinées aux enfants et aux familles. Les liens qui font sortir du jeu (ces règles, l'e-mail de contact) et l'achat sont protégés par une barrière parentale : une multiplication à résoudre.</p>
+    <p>Casse-Glace s'adresse à tous les publics, enfants compris. Il est conçu dans le respect des règles de Google Play pour les applications destinées aux enfants et aux familles. Les liens qui font sortir du jeu (ces règles, l'e-mail de contact) et l'achat sont protégés par une barrière parentale : une multiplication à résoudre. Quel que soit l'âge du joueur, la publicité est toujours demandée comme pour un enfant (voir « Publicité »).</p>
   </section>
 
-  <!--
-    PUBLICITÉ (étape 21) : section à rédiger quand la publicité adaptée aux familles sera ajoutée.
-    À préciser alors : le fournisseur, les données qu'il traite, la base légale, l'absence de publicité
-    personnalisée pour les enfants, les réglages proposés, et la mise à jour de la permission réseau ci-dessus.
   <section class="card">
     <h2>Publicité</h2>
-    <p>…</p>
+    <p>Le jeu est gratuit et financé en partie par la publicité, fournie par <strong>Google AdMob</strong>, une bibliothèque de Google retenue par Google Play pour les applications destinées aux familles (programme des SDK publicitaires autocertifiés).</p>
+    <p><strong>Où et quand.</strong></p>
+    <ul>
+      <li>Un bandeau en bas de l'accueil, de la piste de niveaux et des réglages ; jamais pendant une partie, jamais par-dessus un bouton.</li>
+      <li>De temps en temps, une publicité plein écran entre deux niveaux, après une courte pause : au plus une tous les 5 niveaux réussis, avec au moins 3 minutes d'écart ; jamais pendant le tutoriel, le chapitre « Découverte » ou le défi du jour, ni pendant les 10 premiers niveaux d'un nouveau joueur.</li>
+      <li>Une vidéo, seulement si le joueur la choisit, en échange de 3 cristaux (10 vidéos par jour au plus).</li>
+    </ul>
+    <p><strong>Une publicité pour enfants, pour tout le monde.</strong> Le jeu ne demande pas l'âge : chaque demande de publicité est signalée à Google comme destinée à un enfant, avec un contenu classé « G » (tout public) au maximum. Selon Google, ce traitement désactive la publicité personnalisée et le remarketing, désactive les requêtes vers des fournisseurs publicitaires tiers (pixels de mesure, serveurs publicitaires tiers), applique les protections propres aux enfants, et l'identifiant publicitaire Android n'est pas transmis (le jeu ne peut d'ailleurs pas le lire).</p>
+    <p><strong>Ce que la bibliothèque de Google transmet à Google</strong>, selon Google (<a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">déclaration de Google pour le Play Store</a>), pour afficher les publicités, en mesurer l'affichage et lutter contre la fraude :</p>
+    <ul>
+      <li>l'adresse IP de l'appareil, qui peut servir à estimer sa localisation approximative ;</li>
+      <li>les interactions avec les publicités et l'application (lancement de l'application, appuis, vidéos vues) ;</li>
+      <li>des informations de diagnostic (temps de lancement, blocages, consommation d'énergie) ;</li>
+      <li>des identifiants de l'appareil : l'identifiant de groupe d'applications d'Android (« app set ID ») ; l'identifiant publicitaire n'est pas transmis.</li>
+    </ul>
+    <p>Ces données sont chiffrées pendant leur transfert. Google les traite selon ses propres règles : <a href="https://policies.google.com/technologies/partner-sites?hl=fr">comment Google utilise les informations des sites ou applications qui utilisent ses services</a>, <a href="https://policies.google.com/technologies/ads?hl=fr">la publicité chez Google</a> et les <a href="https://policies.google.com/privacy?hl=fr">règles de confidentialité de Google</a>. La bibliothèque garde aussi sur l'appareil ce dont elle a besoin (publicités en cache, par exemple). Nous ne recevons de Google que des statistiques globales (nombre de publicités affichées, revenus), jamais de données sur un joueur.</p>
+    <p><strong>Aucun consentement demandé.</strong> Aucune publicité personnalisée n'étant jamais demandée, le jeu n'affiche pas de formulaire de consentement ; dans l'Espace économique européen, au Royaume-Uni et en Suisse, Google y sert alors des « annonces limitées » (selon Google, sans collecte, partage ni utilisation de données personnelles pour personnaliser la publicité ; l'adresse IP sert toujours à faire parvenir la publicité à l'appareil). Nous avons laissé activées les « annonces limitées programmatiques » d'AdMob (son réglage par défaut) : elles permettent de servir ces annonces limitées, toujours contextuelles, à partir de la demande programmatique de Google et des acheteurs qu'il autorise ; pour elles, Google utilise sur l'appareil des cookies et un stockage local réservés à la détection du trafic frauduleux, pour se défendre contre la fraude et les abus, un usage pour lequel Google n'exige pas de consentement (<a href="https://support.google.com/admob/answer/10105530?hl=fr">les annonces limitées, selon Google</a>).</p>
+    <p><strong>Base légale.</strong> Cette publicité repose sur notre intérêt légitime (article 6, paragraphe 1, point f, du RGPD) : une publicité contextuelle, jamais personnalisée, qui finance un jeu gratuit, sans suivi ni profilage, et qui s'arrête après l'achat « Casse-Glace complet » (seule la vidéo reste proposée, si le joueur choisit de la regarder).</p>
+    <p><strong>Votre droit d'opposition.</strong> Vous pouvez vous opposer à ce traitement à tout moment, de deux façons. L'achat unique « Casse-Glace complet » retire la publicité : ni bandeau ni publicité plein écran, et la bibliothèque de Google n'est alors même plus démarrée, sauf si le joueur choisit de regarder une vidéo pour gagner des cristaux. Ou bien jouez hors ligne : sans connexion, aucune publicité ne se charge et rien n'est transmis.</p>
   </section>
-  -->
 
   <section class="card">
     <h2>Achats</h2>
-    <p>Le jeu propose un achat unique et facultatif, « Casse-Glace complet », qui débloque le multijoueur. Il passe toujours par la barrière parentale.</p>
+    <p>Le jeu propose un achat unique et facultatif, « Casse-Glace complet », qui débloque le multijoueur et retire la publicité. Il passe toujours par la barrière parentale.</p>
     <ul>
       <li>Le paiement est traité uniquement par Google Play, dans ses propres écrans, selon les <a href="https://policies.google.com/privacy">règles de confidentialité de Google</a>. Nous ne recevons ni ne stockons aucune donnée de paiement. Google Play nous fournit seulement les informations de commande qui servent à suivre les ventes (numéro de commande, date, produit, prix, pays).</li>
       <li>Seul le droit acquis est gardé sur votre appareil, pour que le multijoueur fonctionne aussi sans connexion.</li>
       <li>Le jeu vérifie ce droit auprès de Google Play, par l'application Google Play de l'appareil (au démarrage, au retour dans le jeu, à l'ouverture du multijoueur) : c'est ainsi qu'un achat se restaure après une réinstallation ou sur un autre appareil du même compte Google, et qu'il est retiré en cas de remboursement. « Restaurer mes achats », dans les réglages, fait la même vérification à la demande.</li>
       <li>Aucun serveur à nous n'intervient : le jeu ne nous envoie rien.</li>
+      <li>La bibliothèque de facturation de Google contient un module qui enverrait ses propres diagnostics : il est désactivé dans le jeu (ses événements sont effacés sur l'appareil sans être envoyés).</li>
     </ul>
   </section>
 
